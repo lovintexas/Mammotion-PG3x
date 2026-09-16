@@ -10,7 +10,7 @@ import requests
 import udi_interface
 
 LOGGER = udi_interface.LOGGER
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 
 AUTH_URL = "https://id.mammotion.com/oauth2/token"
 API_BASE = "https://api-open.mammotion.com"

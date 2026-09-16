@@ -52,4 +52,4 @@ Available functionality depends on the capabilities Mammotion exposes for each d
 
 ## Version
 
-Current version: 1.0.1
+Current version: 1.0.2
