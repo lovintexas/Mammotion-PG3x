@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editors>
+
+  <editor id="connectionstate">
+    <range uom="25" subset="0-1" nls="CONNECTIONSTATE"/>
+  </editor>
+
+  <editor id="mowerstatus">
+    <range uom="25" subset="0-8" nls="MOWERSTATUS"/>
+  </editor>
+
+  <editor id="percent">
+    <range uom="51" min="0" max="100" step="1"/>
+  </editor>
+
+  <editor id="bool">
+    <range uom="25" subset="0-1" nls="BOOL"/>
+  </editor>
+
+  <editor id="network">
+    <range uom="25" subset="0-2" nls="NETWORK"/>
+  </editor>
+
+  <editor id="rssi">
+    <range uom="56" min="-150" max="0" step="1"/>
+  </editor>
+
+</editors>

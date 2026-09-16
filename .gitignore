@@ -1,0 +1,26 @@
+# PG3x runtime files
+NSplugin_*.lock
+svc.pid
+plugin_*.cert
+plugin_*.key
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Development backups
+*.bak
+*.bak-*
+*.backup
+*~
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeDefs>
+
+  <nodeDef id="mammotion" nls="mammotion">
+    <sts>
+      <st id="ST" editor="connectionstate"/>
+    </sts>
+    <cmds>
+      <sends/>
+      <accepts>
+        <cmd id="QUERY"/>
+      </accepts>
+    </cmds>
+  </nodeDef>
+
+  <nodeDef id="mower" nls="mower">
+    <sts>
+      <st id="ST" editor="mowerstatus"/>
+      <st id="GV1" editor="percent"/>
+      <st id="GV2" editor="bool"/>
+      <st id="GV3" editor="bool"/>
+      <st id="GV4" editor="network"/>
+      <st id="GV5" editor="rssi"/>
+      <st id="GV6" editor="rssi"/>
+    </sts>
+
+    <cmds>
+      <sends/>
+      <accepts>
+        <cmd id="PAUSE"/>
+        <cmd id="RESUME"/>
+        <cmd id="RETURN"/>
+        <cmd id="CANCEL_RETURN"/>
+        <cmd id="QUERY"/>
+      </accepts>
+    </cmds>
+  </nodeDef>
+
+</nodeDefs>

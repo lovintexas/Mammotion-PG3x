@@ -1,0 +1,40 @@
+ND-mammotion-NAME=Mammotion Controller
+ND-mower-NAME=Mammotion Mower
+
+ST-ST-NAME=Status
+ST-GV1-NAME=Battery
+ST-GV2-NAME=Charging
+ST-GV3-NAME=Online
+ST-GV4-NAME=Active Network
+ST-GV5-NAME=Wi-Fi RSSI
+ST-GV6-NAME=Cellular RSSI
+
+CMD-QUERY-NAME=Query
+
+ND-mammotion-ICON=GenericCtl
+ND-mower-ICON=GenericCtl
+
+CONNECTIONSTATE-0=Not Connected
+CONNECTIONSTATE-1=Connected
+
+MOWERSTATUS-0=Unknown
+MOWERSTATUS-1=Offline
+MOWERSTATUS-2=Standby
+MOWERSTATUS-3=Mowing
+MOWERSTATUS-4=Paused
+MOWERSTATUS-5=Returning
+MOWERSTATUS-6=Mapping
+MOWERSTATUS-7=Updating
+MOWERSTATUS-8=Abnormal
+
+BOOL-0=No
+BOOL-1=Yes
+
+NETWORK-0=Unknown
+NETWORK-1=Wi-Fi
+NETWORK-2=Cellular
+
+CMD-PAUSE-NAME=Pause
+CMD-RESUME-NAME=Resume
+CMD-RETURN-NAME=Return to Charger
+CMD-CANCEL_RETURN-NAME=Cancel Return
