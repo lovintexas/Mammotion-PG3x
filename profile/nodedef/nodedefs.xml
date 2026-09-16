@@ -36,4 +36,18 @@
     </cmds>
   </nodeDef>
 
+
+  <nodeDef id="spino" nls="spino">
+    <sts>
+      <st id="GV3" editor="bool"/>
+    </sts>
+
+    <cmds>
+      <sends/>
+      <accepts>
+        <cmd id="QUERY"/>
+      </accepts>
+    </cmds>
+  </nodeDef>
+
 </nodeDefs>

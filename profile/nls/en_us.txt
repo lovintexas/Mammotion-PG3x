@@ -38,3 +38,6 @@ CMD-PAUSE-NAME=Pause
 CMD-RESUME-NAME=Resume
 CMD-RETURN-NAME=Return to Charger
 CMD-CANCEL_RETURN-NAME=Cancel Return
+
+ND-spino-NAME=Mammotion SPINO
+ND-spino-ICON=GenericCtl

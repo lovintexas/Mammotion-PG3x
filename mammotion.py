@@ -34,6 +34,64 @@ STATUS_MAP = {
 }
 
 
+class SpinoNode(udi_interface.Node):
+    id = 'spino'
+
+    drivers = [
+        {'driver': 'GV3', 'value': 0, 'uom': 25},
+    ]
+
+    def __init__(
+        self,
+        polyglot,
+        primary,
+        address,
+        name,
+        device_id,
+        model=None,
+        version=None
+    ):
+        super().__init__(polyglot, primary, address, name)
+
+        self.device_id = device_id
+        self.model = model
+        self.version = version
+
+    def update_status(self):
+        global controller
+
+        if controller is None:
+            return
+
+        try:
+            data = controller.get_device(self.device_id)
+
+            if not data:
+                LOGGER.warning(
+                    f'No data returned for {self.name}'
+                )
+                return
+
+            online = int(data.get('online') or 0)
+            self.setDriver('GV3', online)
+
+            LOGGER.info(
+                f'{self.name}: online={online}'
+            )
+
+        except Exception as err:
+            LOGGER.error(
+                f'Error updating {self.name}: {err}'
+            )
+
+    def query(self, command=None):
+        self.update_status()
+
+    commands = {
+        'QUERY': query,
+    }
+
+
 class MowerNode(udi_interface.Node):
     id = 'mower'
 
@@ -451,13 +509,20 @@ class Controller(udi_interface.Node):
 
             detail = detail or {}
 
-            node = MowerNode(
+            final_model = detail.get('model') or model
+
+            if final_model.upper().startswith('SPINO'):
+                node_class = SpinoNode
+            else:
+                node_class = MowerNode
+
+            node = node_class(
                 polyglot,
                 self.address,
                 address,
                 name,
                 device_id,
-                model=detail.get('model') or model,
+                model=final_model,
                 version=detail.get('version')
             )
 
@@ -465,7 +530,7 @@ class Controller(udi_interface.Node):
             polyglot.addNode(node)
 
             LOGGER.info(
-                f'Added mower {name} '
+                f'Added device {name} '
                 f'({model}) as {address}'
             )
 
