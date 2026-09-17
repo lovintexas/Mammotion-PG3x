@@ -30,7 +30,13 @@ After a mower command, the plugin automatically refreshes mower status to accoun
 
 This plugin requires Mammotion Developer API credentials.
 
-Add the following Custom Parameters in PG3x:
+Obtain your credentials from the Mammotion Developer Portal:
+
+https://developer.mammotion.com/credentials
+
+Sign in with your Mammotion account and create a developer credential.
+
+In the PG3x Mammotion plugin configuration, enter the credentials in the pre-created Custom Parameters:
 
 - `client_id` - Mammotion Developer API Client ID
 - `client_secret` - Mammotion Developer API Client Secret

@@ -4,20 +4,26 @@ This plugin uses the official Mammotion Developer API.
 
 ## Mammotion Developer Credentials
 
-Obtain API credentials from the Mammotion Developer portal.
+This plugin requires credentials from the Mammotion Developer API.
 
-In the PG3x plugin configuration, add these Custom Parameters:
+1. Go to the Mammotion Developer Portal:
 
-- `client_id` - Your Mammotion Developer API Client ID
-- `client_secret` - Your Mammotion Developer API Client Secret
+   https://developer.mammotion.com/credentials
 
-The parameter names must be entered exactly as shown above.
+2. Sign in with your Mammotion account.
 
-After entering both parameters, restart the Mammotion plugin.
+3. Create a developer credential and save the Client ID and Client Secret.
 
-The plugin will authenticate with Mammotion, discover supported devices associated with the developer account, and create the corresponding IoX nodes.
+4. In the PG3x Mammotion plugin configuration, enter your credentials in the pre-created Custom Parameters:
+
+   - `client_id` - Your Mammotion Developer API Client ID
+   - `client_secret` - Your Mammotion Developer API Client Secret
+
+5. Restart the Mammotion plugin after entering the credentials.
 
 ## Notes
+
+The plugin will authenticate with Mammotion, discover supported devices associated with the developer account, and create the corresponding IoX nodes.
 
 The plugin currently provides the telemetry and commands available through the official Mammotion Developer API.
 
