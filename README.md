@@ -1,5 +1,11 @@
 # Mammotion Plugin for PG3x / IoX
 
+## Documentation
+
+Full documentation and setup guide:
+
+https://lovintexas.github.io/Mammotion-PG3x/
+
 A PG3x node server for Mammotion robotic lawn equipment using the official Mammotion Developer API.
 
 ## Features
