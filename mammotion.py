@@ -10,7 +10,7 @@ import requests
 import udi_interface
 
 LOGGER = udi_interface.LOGGER
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 AUTH_URL = "https://id.mammotion.com/oauth2/token"
 API_BASE = "https://api-open.mammotion.com"
@@ -86,6 +86,7 @@ class SpinoNode(udi_interface.Node):
 
     def query(self, command=None):
         self.update_status()
+        self.reportDrivers()
 
     commands = {
         'QUERY': query,
@@ -252,6 +253,7 @@ class MowerNode(udi_interface.Node):
 
     def query(self, command=None):
         self.update_status()
+        self.reportDrivers()
 
     commands = {
         'PAUSE': pause,
